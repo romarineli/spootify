@@ -1,6 +1,5 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
-import qs from 'qs';
 import DiscoverBlock from './DiscoverBlock/components/DiscoverBlock';
 import api, {getAuth} from '../../../config'
 import '../styles/_discover.scss';
@@ -10,11 +9,7 @@ export default class Discover extends Component {
     super();
 
     this.state = {
-      token: {
-        headers: {
-          'Authorization': 'Bearer BQBlDhf7qzw6MMPVgEzty32fmBovA6I5yXol0crYhkHdvEXkYiDJ3GB4jD0LHOGX0gqD7yTSAFGNk0c7AfCB_b0sYZbSzdFr2ou_DPZ_2Tnjmkxv6Tw'
-        }
-      },
+      token: {},
       newReleases: [],
       playlists: [],
       categories: []
